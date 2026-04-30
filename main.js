@@ -75,12 +75,10 @@ document.addEventListener("DOMContentLoaded", function() {
             currentIndex = index;
         }
         
-        // Geser slider berdasarkan currentIndex
         slider.style.transform = `translateX(-${currentIndex * 100}%)`;
         updateDots();
     }
 
-    // 3. Navigasi
     function nextSlide() {
         showSlides(currentIndex + 1);
     }
@@ -89,9 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
         showSlides(currentIndex - 1);
     }
 
-    // 4. Auto Slide Logic
     function startAutoSlide() {
-        // Hapus interval lama jika ada untuk menghindari double speed
         stopAutoSlide(); 
         autoSlideInterval = setInterval(nextSlide, 4000);
     }
@@ -100,17 +96,13 @@ document.addEventListener("DOMContentLoaded", function() {
         clearInterval(autoSlideInterval);
     }
 
-    // 5. Event Listeners
-    
-    // Klik Titik (Dots)
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             showSlides(index);
-            startAutoSlide(); // Reset timer setelah diklik manual
+            startAutoSlide(); 
         });
     });
 
-    // Klik Tombol Navigasi
     nextBtn.addEventListener('click', () => {
         nextSlide();
         startAutoSlide();
@@ -121,11 +113,9 @@ document.addEventListener("DOMContentLoaded", function() {
         startAutoSlide();
     });
 
-    // Pause saat mouse di atas slider (user ingin melihat gambar)
     sliderContainer.addEventListener('mouseenter', stopAutoSlide);
     sliderContainer.addEventListener('mouseleave', startAutoSlide);
 
-    // Inisialisasi awal
     showSlides(currentIndex);
     startAutoSlide();
 });
