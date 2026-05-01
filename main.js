@@ -164,7 +164,7 @@ function toggleTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-async function sendMessage() {
+async function sendMessage() { 
     const input = document.getElementById('userInput');
     const chatBody = document.getElementById('chatBody');
     
