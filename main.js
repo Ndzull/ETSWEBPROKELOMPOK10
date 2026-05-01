@@ -148,3 +148,66 @@ document.getElementById('userInput')?.addEventListener('keypress', function (e) 
 
 
 // AI ANJAYYYYYYYY
+const API_KEY = "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";
+const API_URL = "https://api.groq.com/openai/v1/chat/completions";
+
+function toggleChat() {
+    const chatbox = document.getElementById('aiChatbox');
+    if (chatbox) {
+        chatbox.classList.toggle('active');
+    } else {
+        console.error("Elemen aiChatbox gaonok");
+    }
+}
+
+function toggleTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+async function sendMessage() {
+    const input = document.getElementById('userInput');
+    const chatBody = document.getElementById('chatBody');
+    
+    if (!input || !chatBody) return;
+    const userText = input.value.trim();
+    
+    if (userText !== "") {
+        chatBody.innerHTML += `<div class="msg user-msg">${userText}</div>`;
+        input.value = "";
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        const loadingId = "loading-" + Date.now();
+        chatBody.innerHTML += `<div class="msg ai-msg" id="${loadingId}">...</div>`;
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        try {
+            const response = await fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer " + API_KEY  
+                },
+                body: JSON.stringify({
+                    model: "llama-3.1-8b-instant", 
+                    messages: [
+                        { role: "system", content: "Kamu adalah asisten STATtion. Jawab singkat." },
+                        { role: "user", content: userText }
+                    ]
+                })
+            });
+
+            const data = await response.json();
+            
+            if (data.error) {
+                document.getElementById(loadingId).innerText = "Error API: " + data.error.message;
+            } else {
+                const aiResponse = data.choices[0].message.content; 
+                document.getElementById(loadingId).innerText = aiResponse;
+            }
+
+        } catch (error) {
+            document.getElementById(loadingId).innerText = "Koneksi gagal. Cek internet atau API Key.";
+        }
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+}
