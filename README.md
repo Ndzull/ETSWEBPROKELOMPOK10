@@ -37,6 +37,7 @@ Yang nyatuin: ijul (aman)<br>
 <h2>Yang perlu dibenahin buat finishing:</h2>
 - masih ada beberapa section yang responsifnya berantakan (section 1 homepage)
 - beresin navbar di page kategori (anomali jir)
+- nyari cara push full github tanpa bagian api key (chatbox) ke hide
 
 <h2>Path file</h2>
 <code>
