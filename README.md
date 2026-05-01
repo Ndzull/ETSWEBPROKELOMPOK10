@@ -21,15 +21,31 @@ STATtion adalah sebuah aplikasi berbasis web yang dirancang untuk memberikan fas
 <img src="assets/flowchart.png" alt="Flowchart">
 
 <h2>JOBDESK CHECKLIST</h2>
-Loginpage: kiki (PROGRESS sudah aman (tgl tambah be kalau niat))<br>
+Loginpage: kiki (aman)<br>
 Homepage<br>
-- header: ijul (PROGRESS anggep aja udah aman)<br>
-- section 1 ikhwan (bagian narasi masih busuk)<br>
-- section 2 ikhwan (aman tgl masukin foto)<br>
-- section 3 ijul (aman tgl tambah foto dan link)<br>
-- section 4 ijul (aman tgl tambah link)<br>
+- header: ijul (aman)<br>
+- section 1 ikhwan (aman)<br>
+- section 2 ikhwan (aman)<br>
+- section 3 ijul (aman)<br>
+- section 4 ijul (aman)<br>
 - footer: ikhwan (aman)<br>
-Aboutpage : Hani (PROGRESS sudah 80%)<br>
-Kategoripage : grace (PROGRESS aman tp blm disatuin formatnya)<br>
-Chatbox section : ijul<br>
-Yang nyatuin: ijul<br>
+Aboutpage : Hani (aman)<br>
+Kategoripage : grace (aman)<br>
+Chatbox section : ijul (aman)<br>
+Yang nyatuin: ijul (aman)<br>
+
+<h2>Yang perlu dibenahin buat finishing:</h2>
+- masih ada beberapa section yang responsifnya berantakan (section 1 homepage)
+- beresin navbar di page kategori (anomali jir)
+
+<h2>Path file</h2>
+<code>
+├── aboutpage.html --> halaman about
+├── assets --> Isinya gambar-gambar yang digunakan di website
+├── category.html --> halaman kategori
+├── draft --> Isinya beberapa draft kodingan dari masing-masing anggota polosan
+├── index.html --> homepage
+├── loginpage.html --> halaman login
+├── main.js --> file js website
+├── README.md
+└── style.css --> file css website</code>

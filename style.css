@@ -1,5 +1,4 @@
 /* login page */
-
 .login-page {
     /* min-height: 100vh; */
     /* width: 100%; */
@@ -50,7 +49,7 @@
     width: 380px;
     padding: 40px;
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Transparansi putih tipis */
+    background: rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(25px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 15px 50px rgba(10, 11, 53, 0.3);
@@ -60,12 +59,11 @@
 
 .login-page .card h2 {
     margin-bottom: 25px;
-    color: #ffffff; /* Ubah ke putih agar kontras dengan blur */
+    color: #ffffff; 
     font-weight: 600;
     letter-spacing: 1.5px;
 }
 
-/* Input & Select */
 .login-page .card input,
 .login-page .card select {
     width: 100%;
@@ -126,7 +124,6 @@
     color: #000;
 }
 
-/* Logic Toggle Login & Register */
 .login-page input[type="radio"] {
     display: none;
 }
@@ -155,7 +152,6 @@
     to { opacity: 1; transform: translateX(0); }
 }
 
-/* Responsif Mobile */
 @media (max-width: 480px) {
     .login-page .card {
         width: 90%;
@@ -164,13 +160,12 @@
 }
 
 /* general */
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(160deg, #b8e4f7 0%, #87CEEB 40%, #a8d8f0 100%);
-            min-height: 150vh;
-            color: var(--dark);
-            }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(160deg, #b8e4f7 0%, #87CEEB 40%, #a8d8f0 100%);
+    min-height: 150vh;
+    color: var(--dark);
+}
 
 /* ada titik-titik di ujung doa-doa */
         /* body::before {
@@ -194,7 +189,7 @@
     position: fixed; 
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 99999;
     transition: all 0.4s ease;
     font-family: 'Poppins', sans-serif;
 }
@@ -207,7 +202,7 @@
     padding: 12px 25px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     justify-content: space-between;
 }
@@ -266,7 +261,6 @@
     color: white !important;
 }
 
-/* floating side menu */
 @media (min-width: 992px) {
     .navbar-section:not(.scrolled) .navbar-collapse {
         display: flex !important; 
@@ -292,7 +286,7 @@
 
 #navContent.active-side-menu .navbar-nav {
     flex-direction: column !important;
-    align-items: flex-end !important; /* Menu nempel kanan sesuai desain */
+    align-items: flex-end !important; 
     gap: 15px !important;
 }
 
@@ -381,7 +375,6 @@
     font-style: italic;
 }
 
-/* Efek Gradasi Khusus pada Highlight & Judul */
 .section-satu-highlight {
     background: linear-gradient(
         120deg, 
@@ -390,7 +383,7 @@
         #78f0fd, 
         #35546b
     );
-    background-size: 300% auto; /* Memperlebar gradasi agar bisa digeser */
+    background-size: 300% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-style: normal;
@@ -407,7 +400,6 @@
     }
 }
 
-/* Subtitle */
 .section-satu-sub {
     font-size: 16px;
     color: #071c2b;
@@ -417,7 +409,6 @@
     font-weight: 400;
 }
 
-/* Tombol CTA */
 .cta-main {
     text-decoration: none;
     padding: 12px 30px;
@@ -505,7 +496,7 @@
         @keyframes bgMove {
             from { transform: translate(0,0); }
             to { transform: translate(-60px,-60px); }
-        } */
+        } 
 
 h2 {
     font-family: 'Poppins', sans-serif;
@@ -563,7 +554,6 @@ h2 {
       background: #efefef;
     }
  
-    /* ---- Card label ---- */
     .why-label {
       /* font-size: 0.95rem; */
       /* font-weight: 800; */
@@ -583,7 +573,6 @@ h2 {
     transition: all 0.3s ease;
 }
 
-/* Format Lingkaran Tunggal */
 .circle-dua {
     width: 100px;
     height: 100px;
@@ -598,11 +587,10 @@ h2 {
     align-items: center;
     /* background-color: #ffffff; */
     transition: all 0.3s ease;
-    flex-shrink: 0; /* Mencegah lingkaran gepeng di layar kecil */
+    flex-shrink: 0;
     margin: 0 auto;
 }
 
-/* Ukuran Ikon di dalam lingkaran */
 .circle-dua i {
     font-size: 3rem;
     color: #212529;
@@ -611,10 +599,9 @@ h2 {
     align-items: center;
 }
 
-/* Efek Hover Saat Link Didekati */
 .circle-link:hover .circle-dua {
     transform: scale(1.1);
-    border-color: #35546b; /* Warna biru sesuai tema navbarmu */
+    border-color: #35546b; 
     background-color: #f8f9fa;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -635,21 +622,13 @@ h2 {
   --gold: #c47d00;
   --green: #1e9a57;
   --pink: #e05ca0;
-  --glass: rgba(255,255,255,0.72); /* card, tombol, banner */
-  --glass-dark: rgba(10,34,51,0.88); /* overlay foto team */
+  --glass: rgba(255,255,255,0.72); 
+  --glass-dark: rgba(10,34,51,0.88); 
   --shadow: rgba(0,0,0,0.1);
-  --shadow-hover: rgba(0,0,0,0.2); /* buat hovernya */
+  --shadow-hover: rgba(0,0,0,0.2); 
   --transition: transform .3s, box-shadow .3s;
 }
 
-/* body {
-  font-family: var(--font-main);
-  background: linear-gradient(160deg, #b8e4f7 0%, #87CEEB 40%, #a8d8f0 100%);
-  min-height: 100vh;
-  color: var(--dark);
-} */
-
-/* Container Utama untuk Konten Tengah */
 .container-custom {
   max-width: 1100px;
   margin: 150px auto;
@@ -658,7 +637,6 @@ h2 {
   z-index: 1;
 }
 
-/* Hero Section dengan Gradasi */
 .about-hero-bg {
     /* margin-top: -100px; */
   width: 100%;
@@ -667,7 +645,6 @@ h2 {
   position: relative;
 }
 
-/* Content White Section */
 .content-white-bg {
     margin-top: -100px;
   width: 100%;
@@ -675,7 +652,6 @@ h2 {
   background-color: transparent;
 }
 
-/* Team & Location dengan Polkadot Bergerak */
 .team-location-bg {
     margin-top: -260px;
     /* margin-bottom: 100px; */
@@ -687,7 +663,6 @@ h2 {
   overflow: hidden;
 }
 
-/* Pindahkan animasi polkadot ke sini agar tidak merusak layout desktop */
 /* .team-location-bg::before {
   content: "";
   position: absolute;
@@ -699,12 +674,10 @@ h2 {
   z-index: 0;
 } */
 
-/* Pastikan section-title dan grid berada di atas polkadot */
 .team-location-bg .container-custom {
   position: relative;
   z-index: 2;
 }
-
 
 .page {
   /* max-width: 1100px; */
@@ -738,7 +711,6 @@ h2 {
             to { transform: translate(-60px,-60px); }
         }
 
-/* Animasi */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -770,7 +742,6 @@ h1 {
 line-height: 1;
 }
 
-/* Card dasar */
 .card {
   background: var(--glass); border-radius: 22px; padding: 30px 28px;
   box-shadow: 0 4px 20px var(--shadow);
@@ -783,13 +754,11 @@ line-height: 1;
 .card p:last-of-type { margin-bottom: 0; }
 .card strong { color: var(--dark); font-weight: 600; }
 
-/* Main Grid */
 .main-grid {
   display: grid; grid-template-columns: 1.2fr .9fr;
   gap: 28px; align-items: start;
 }
 
-/* Stat Cards */
 .stats-col { display: flex; flex-direction: column; gap: 14px; }
 
 .stat-card {
@@ -799,7 +768,7 @@ line-height: 1;
   position: relative; overflow: hidden;
   transition: var(--transition);
 }
-/* garis warna kiri */
+
 .stat-card::before {
   content: ''; position: absolute; top: 0; left: 0;
   width: 4px; height: 100%; border-radius: 4px 0 0 4px;
@@ -926,19 +895,46 @@ line-height: 1;
     }
 
 
-/* kategori page */
-
-.marketplace-page body,
-body.marketplace {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(160deg, #b8e4f7 0%, #87CEEB 40%, #a8d8f0 100%);
+.marketplace {
+    position: relative; 
+    width: 100%;
     min-height: 100vh;
-    color: var(--dark);
-    
+    overflow: hidden; 
+    /* background-color: transparent;  */
+    /* display: block; */
+    margin: 0;
+    padding: 0;
 }
 
-.marketplace .container {
-    padding: 120px 5% 40px; 
+.marketplace::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%; 
+    height: 300%; 
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 2.5px, transparent 1.5px);
+    background-size: 50px 50px;
+    animation: bgMove 20s linear infinite;
+    z-index: -1; 
+}
+
+.container-kategori {
+    position: relative;
+    z-index: 10;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* --- Animasi Gerak --- */
+@keyframes bgMove {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-50px, -50px);
+    }
 }
 
 /* Category Title */
@@ -1536,13 +1532,13 @@ a.stat-link:hover .fw-bold {
       .footer-brand-title { font-size: 1.1rem; }
     }
 
-/* Sidebar Chatbox */
+/*Chatbox */
 .chatbox-sidebar {
     position: fixed;
-    top: 100px; /* Menyesuaikan agar di bawah navbar */
-    right: -350px; /* Sembunyi di kanan */
+    top: 100px; 
+    right: -350px; 
     width: 320px;
-    height: 500px;
+    height: 450px;
     background: #f8f9fa;
     border-radius: 20px 0 0 20px;
     box-shadow: -5px 0 25px rgba(0,0,0,0.1);
@@ -1558,7 +1554,7 @@ a.stat-link:hover .fw-bold {
 }
 
 .chatbox-header {
-    background: #35546b; /* Warna branding STATtion */
+    background: #35546b; 
     color: white;
     padding: 15px;
     border-radius: 20px 0 0 0;
@@ -1585,7 +1581,6 @@ a.stat-link:hover .fw-bold {
     border-radius: 0 0 0 20px;
 }
 
-/* Bubble Chat */
 .msg {
     padding: 10px 14px;
     border-radius: 15px;
@@ -1606,7 +1601,6 @@ a.stat-link:hover .fw-bold {
     border-bottom-right-radius: 2px;
 }
 
-/* Floating Button */
 .chat-toggle-btn {
     position: fixed;
     bottom: 30px;
