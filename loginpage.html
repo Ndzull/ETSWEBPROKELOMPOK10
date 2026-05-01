@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STATtion FORM</title>
+    <link rel="icon" type="image/png" href="assets/logotok.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="login-page">
+<input type="radio" name="tab" id="loginTab" checked>
+<input type="radio" name="tab" id="registerTab">
+
+<div class="container">
+    <div class="card">
+
+        <form class="form login">
+            <h2>Welcome to <i>STATtion!</i></h2>
+
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="button" class="btn-login" onclick="window.location.href='index.html'">Login</button>
+
+            <label for="registerTab" class="btn-register">Register</label>
+        </form>
+
+        <form class="form register">
+            <h2>REGISTER</h2>
+
+            <input type="text" placeholder="Nama Depan" required>
+            <input type="text" placeholder="Nama Belakang" required>
+            <input type="date" required>
+
+            <select required>
+                <option value="">Jenis Kelamin</option>
+                <option>Laki-laki</option>
+                <option>Perempuan</option>
+            </select>
+
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="btn-login">Daftar</button>
+
+            <label for="loginTab" class="btn-register">Kembali</label>
+        </form>
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>

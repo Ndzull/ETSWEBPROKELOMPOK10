@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STATtion Marketplace</title>
+    <style>
+        
+        /* Grid Produk */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+         .product-card {
+            background-color: var(--abu-terang);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        /* Container Utama */
+        .container {
+            padding: 40px 5%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="category-section">
+            <h2 class="category-title">Kategori 1: Alat Hitung & Kalkulator</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">Kalkulator Grafik</div>
+                    <h3>Casio fx-CG50</h3>
+                    <span class="price">Rp 2.450.000</span>
+                    <button class="btn-detail">Detail</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Kalkulator Saintifik</div>
+                    <h3>Casio fx-991EX</h3>
+                    <span class="price">Rp 450.000</span>
+                    <button class="btn-detail">Detail</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Kalkulator Keuangan</div>
+                    <h3>Casio fs-FX200</h3>
+                    <span class="price">Rp 1.200.000</span>
+                    <button class="btn-detail">Detail</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">Kalkulator Standar</div>
+                    <h3>Joyko Scientific</h3>
+                    <span class="price">Rp 150.000</span>
+                    <button class="btn-detail">Detail</button>
+                </div>
+             </div>
+        </section>   
+    
+</body>
+</html>

@@ -1,12 +1,12 @@
+// Navbar
 window.onscroll = function() {
     var navbar = document.getElementById("mainNavbar");
-    if (window.pageYOffset > 100) { // Jika scroll lebih dari 100px
+    if (window.pageYOffset > 100) { 
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
     }
 };
-
 
     document.addEventListener("DOMContentLoaded", function() {
     const toggler = document.querySelector(".navbar-toggler");
@@ -16,22 +16,18 @@ window.onscroll = function() {
         // ham click
         toggler.addEventListener("click", function(e) {
             e.stopPropagation(); 
-            // Toggle class CSS yang kita buat tadi
             navContent.classList.toggle("active-side-menu");
         });
 
-        // 2. LOGIKA SCROLL (Ganti State Navbar)
         window.onscroll = function() {
             if (window.pageYOffset > 50) {
                 navbarSection.classList.add("scrolled");
             } else {
                 navbarSection.classList.remove("scrolled");
-                // Opsional: Tutup menu side-bar kalau user scroll balik ke atas
                 navContent.classList.remove("active-side-menu");
             }
         };
 
-        // 3. LOGIKA KLIK DI LUAR MENU (Tutup otomatis)
         document.addEventListener("click", function(event) {
             const isClickInside = navContent.contains(event.target) || toggler.contains(event.target);
 
@@ -41,8 +37,8 @@ window.onscroll = function() {
         });
     });
 
+// slider di section tiga
 document.addEventListener("DOMContentLoaded", function() {
-    // Gunakan selector yang spesifik ke .section-tiga agar tidak salah ambil elemen lain
     const sectionTiga = document.querySelector('.section-tiga');
     const slider = sectionTiga.querySelector('.slider');
     const slides = sectionTiga.querySelectorAll('.slide');
@@ -54,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentIndex = 0;
     let autoSlideInterval;
 
-    // 1. Fungsi Update Dots (Indikator Titik)
     function updateDots() {
         dots.forEach((dot, index) => {
             if (index === currentIndex) {
@@ -65,12 +60,11 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // 2. Fungsi Utama Tampilan Slide
     function showSlides(index) {
         if (index >= slides.length) {
-            currentIndex = 0; // Balik ke awal
+            currentIndex = 0; 
         } else if (index < 0) {
-            currentIndex = slides.length - 1; // Ke slide terakhir
+            currentIndex = slides.length - 1; 
         } else {
             currentIndex = index;
         }
@@ -154,16 +148,20 @@ document.getElementById('userInput')?.addEventListener('keypress', function (e) 
 
 
 // AI ANJAYYYYYYYY
-const API_KEY = "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";
-const API_URL = "https://api.groq.com/openai/v1/chat/completions";
+
+
 
 function toggleChat() {
     const chatbox = document.getElementById('aiChatbox');
     if (chatbox) {
         chatbox.classList.toggle('active');
     } else {
-        console.error("Elemen aiChatbox gak ketemu!");
+        console.error("Elemen aiChatbox gaonok");
     }
+}
+
+function toggleTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 async function sendMessage() {

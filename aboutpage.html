@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="assets/logotok.png" />
+  <title>About STATtion</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+    <section class="navbar-section sticky-top" id="mainNavbar">
+    <div class="container mt-4">
+        <header class="navbar navbar-expand-lg">
+            <div class="d-flex align-items-center gap-3">
+                <a class="navbar-brand logo-circle" href="#">
+                    <img src="assets/logotok.png" alt="Logo" style="width: 40px;">
+                </a>
+
+                <form class="search-wrapper d-none d-lg-block">
+                    <div class="search-box">
+                        <input class="search-input" type="search" placeholder="Search...">
+                        <button class="search-icon-btn" type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto gap-3 align-items-center">  
+                  <li class="nav-item">
+                        <a class="nav-link btn-custom" href="index.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-custom" href="category.html"><b>Kategori</b></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link btn-custom" href="aboutpage.html"><b>About</b></a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link btn-custom" href="https://wa.me/628283854081496?text=Halo%20STATtion,%20saya%20mau%20tanya%20tentang%20kalkulator%20terbaru"><b>Contact</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-custom" href="javascript:void(0)" onclick="toggleChat()"><b>Chatbox</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-logout" href="loginpage.html">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    </div>
+</section>
+<div class="page">
+<!-- Bagian Hero & Deskripsi (Background Gradasi Biru) -->
+<section class="about-hero-bg">
+  <div class="container-custom">
+    <div class="header anim">
+      <div class="eyebrow">Marketplace Anak Statistika</div>
+      <h1>About <i>STATtion</i></h1>
+      <p class="subtitle">Satu platform untuk semua kebutuhan mahasiswa Statistika dari modul kuliah, jasa olah data, hingga komunitas belajar bersama.</p><br><br>
+    </div>
+
+    <div class="main-grid anim anim-1">
+      <div class="card">
+        <h2>Apa itu <i>STATtion?</i></h2>
+        <p><strong><i>STATtion</i></strong> adalah marketplace yang dirancang khusus untuk mahasiswa <strong>Statistika</strong> tempat di mana kamu bisa menemukan, berbagi, dan membeli berbagai kebutuhan akademik maupun praktis seputar dunia statistik.</p>
+        <p>Dari <strong>buku</strong>, <strong>kalkulator statistik</strong>, hingga <strong>jasa konsultasi analisis data</strong> semua tersedia dalam satu platform yang ramah dan mudah diakses oleh seluruh civitas statistika.</p>
+      </div>
+
+      <div class="stats-col anim anim-2">
+        <div class="stat-card c1">
+          <div class="stat-icon">📦</div>
+          <div><div class="stat-num">500+</div><div class="stat-label">Produk Tersedia</div></div>
+        </div>
+        <div class="stat-card c2">
+          <div class="stat-icon">👥</div>
+          <div><div class="stat-num">1.2K+</div><div class="stat-label">Pengguna Aktif</div></div>
+        </div>
+        <div class="stat-card c3">
+          <div class="stat-icon">⭐</div>
+          <div><div class="stat-num">98%</div><div class="stat-label">Kepuasan Pembeli</div></div>
+        </div>
+        <div class="stat-card c4">
+          <div class="stat-icon">🏛️</div>
+          <div><div class="stat-num">12+</div><div class="stat-label">Kampus Bergabung</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Bagian Features & CTA (Background Putih/Bersih) -->
+<section class="content-white-bg">
+  <div class="container-custom">
+    <div class="features anim anim-3">
+      <div class="feat-card">
+        <span class="feat-emoji">📚</span>
+        <div class="feat-title">Buku dan Modul</div>
+        <p class="feat-desc">Akses ratusan modul, catatan kuliah, dan panduan praktikum dari sesama mahasiswa statistika.</p>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">🧮</span>
+        <div class="feat-title">Kalkulator & Software</div>
+        <p class="feat-desc">Hitung mean, median, dan lainnya dengan kalkulator interaktif langsung di platform.</p>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">🔬</span>
+        <div class="feat-title">Jasa Analisis Data</div>
+        <p class="feat-desc">Butuh bantuan SPSS, R, Python? Temukan tenaga ahli dari mahasiswa statistika terpercaya.</p>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">💬</span>
+        <div class="feat-title">Forum dan Diskusi</div>
+        <p class="feat-desc">Tanya jawab, diskusi soal ujian, dan networking dengan komunitas statistika se-Indonesia.</p>
+      </div>
+    </div>
+
+    <div class="cta-banner anim anim-4">
+      <div class="cta-text">
+        <h3>Siap bergabung dengan <i>STATtion</i>?</h3>
+        <p>Daftar gratis dan mulai jelajahi ribuan produk dan layanan dari anak-anak statistika terbaik.</p>
+      </div>
+      <a href="loginpage.html"><button class="cta-btn">Mulai Bergabung</button></a>
+    </div>
+  </div>
+</section>
+
+<!-- Bagian Team & Location (Background Light Blue / Polkadot) -->
+<section class="team-location-bg">
+  <div class="container-custom">
+    <div class="section-title anim anim-5">
+      <h2>Our Team</h2>
+      <p>Orang-orang di balik <i>STATtion</i></p>
+    </div>
+
+    <div class="team-grid anim anim-5">
+      <div class="team-card">
+        <img src="assets/ijul.jpeg" alt="Naila" />
+        <div class="team-info">
+          <div class="team-name">Naila Dzulfa</div>
+          <!-- <div class="team-role">Founder & Data Analyst</div> -->
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/nailadzulfa">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:naiidzull56@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/hani.png" alt="Hani" />
+        <div class="team-info">
+          <div class="team-name">Hanida Hafsya Tsabita</div>
+          <!-- <div class="team-role">R & SPSS Consultant</div> -->
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/hanida-hafsya-tsabita-42b849380/">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:hanidahafsya@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/grace.jpeg" alt="Grace" />
+        <div class="team-info">
+          <div class="team-name">Grace Nathalie</div>
+          <!-- <div class="team-role">Python & ML Analyst</div> -->
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/grace-nathalie-3a4b2b210/">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:gracechristy96@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/ikhwan.jpeg" alt="Ikhwan" />
+        <div class="team-info">
+          <div class="team-name">Ikhwan Nursyabani</div>
+          <!-- <div class="team-role">Content & Community</div> -->
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/ikhwan-nur-sya-bani-666231343">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:nursyabaniikhwan@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/kiki.png" alt="Kiki" />
+        <div class="team-info">
+          <div class="team-name">Rizki Ritama</div>
+          <!-- <div class="team-role">UI & Platform Dev</div> -->
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/rizki-ritama-43b7783a9">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:rizkiritama27@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+<br><br> <button onclick="toggleTop()" class="top-toggle-btn">
+    <i class="bi bi-chevron-up fw-bold"></i>
+</button>
+    <div class="section-title anim anim-6">
+      <h2>Our Location</h2>
+      <p>Kunjungi marketplace offline STATtion</p>
+    </div>
+    <div class="maps-wrap anim anim-6">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6699275616384!2d112.79010817357141!3d-7.278346871523232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbfa2ec4fcbb%3A0x3404f45cc0d80e82!2sDepartemen%20Statistika%20Bisnis%20ITS%20Surabaya!5e0!3m2!1sid!2sid!4v1777338218830!5m2!1sid!2sid" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+</div>
+  <!-- <div class="page">
+    <div class="header anim">
+      <div class="eyebrow">Marketplace Anak Statistika</div>
+      <h1>About <i>STATtion</i></h1>
+      <p class="subtitle">Satu platform untuk semua kebutuhan mahasiswa Statistika dari modul kuliah, jasa olah data,
+        hingga komunitas belajar bersama.</p><br>
+    </div> -->
+
+    <!-- Main Grid -->
+    <!-- <div class="main-grid anim anim-1">
+      <div class="card">
+        <h2>Apa itu <i>STATtion?</i></h2>
+        <p><strong><i>STATtion</i></strong> adalah marketplace yang dirancang khusus untuk mahasiswa
+          <strong>Statistika</strong> tempat di mana kamu bisa menemukan, berbagi, dan membeli berbagai kebutuhan
+          akademik maupun praktis seputar dunia statistik.</p>
+        <p>Dari <strong>buku</strong>, <strong>kalkulator statistik</strong>, hingga <strong>jasa konsultasi analisis
+            data</strong> semua tersedia dalam satu platform yang ramah dan mudah diakses oleh seluruh civitas
+          statistika.</p>
+        <p><i>STATtion</i> hadir karena kami percaya bahwa kolaborasi antar mahasiswa statistika adalah kunci untuk tumbuh
+          bersama, baik secara akademik maupun profesional.</p>
+      </div>
+
+      <div class="stats-col anim anim-2">
+        <div class="stat-card c1">
+          <div class="stat-icon">📦</div>
+          <div>
+            <div class="stat-num">500+</div>
+            <div class="stat-label">Produk Tersedia</div>
+          </div>
+        </div>
+        <div class="stat-card c2">
+          <div class="stat-icon">👥</div>
+          <div>
+            <div class="stat-num">1.2K+</div>
+            <div class="stat-label">Pengguna Aktif</div>
+          </div>
+        </div>
+        <div class="stat-card c3">
+          <div class="stat-icon">⭐</div>
+          <div>
+            <div class="stat-num">98%</div>
+            <div class="stat-label">Kepuasan Pembeli</div>
+          </div>
+        </div>
+        <div class="stat-card c4">
+          <div class="stat-icon">🏛️</div>
+          <div>
+            <div class="stat-num">12+</div>
+            <div class="stat-label">Kampus Bergabung</div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Feature Cards -->
+    <!-- <div class="features anim anim-3">
+      <div class="feat-card">
+        <span class="feat-emoji">📚</span>
+        <div class="feat-title">Buku dan Modul</div>
+        <p class="feat-desc">Akses ratusan modul, catatan kuliah, dan panduan praktikum dari sesama mahasiswa
+          statistika.</p>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">🧮</span>
+        <div class="feat-title">Kalkulator dan Lisensi Software</div>
+        <p class="feat-desc">Hitung mean, median, modus, standar deviasi, dan lainnya dengan kalkulator interaktif
+          langsung di platform.</p>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">🔬</span>
+        <div class="feat-title">Jasa Analisis Data</div>
+        <p class="feat-desc">Butuh bantuan SPSS, R, Python? Temukan tenaga ahli dari mahasiswa statistika terpercaya.
+        </p>
+      </div>
+      <div class="feat-card">
+        <span class="feat-emoji">💬</span>
+        <div class="feat-title">Forum dan Diskusi</div>
+        <p class="feat-desc">Tanya jawab, diskusi soal ujian, dan networking dengan komunitas statistika se-Indonesia.
+        </p>
+      </div>
+    </div> -->
+
+    <!-- CTA Banner -->
+    <!-- <div class="cta-banner anim anim-4">
+      <div class="cta-text">
+        <h3>Siap bergabung dengan <i>STATtion</i>?</h3>
+        <p>Daftar gratis dan mulai jelajahi ribuan produk dan layanan dari anak-anak statistika terbaik.</p>
+      </div>
+      <a href="loginpage.html"><button class="cta-btn">Mulai Bergabung</button></a>
+    </div> -->
+
+    <!-- Our Team -->
+    <!-- <div class="section-title anim anim-5">
+      <h2>Our Team</h2>
+      <p>Orang-orang di balik <i>STATtion</i></p>
+    </div>
+
+    <div class="team-grid anim anim-5">
+      <div class="team-card">
+        <img src="assets/ijul.jpeg" alt="Naila" />
+        <div class="team-info">
+          <div class="team-name">Naila Dzulfa</div>
+          <div class="team-role">Founder & Data Analyst</div>
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/nailadzulfa">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:naiidzull56@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/hani.jpeg" alt="Hani" />
+        <div class="team-info">
+          <div class="team-name">Hanida Hafsya Tsabita</div>
+          <div class="team-role">R & SPSS Consultant</div>
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/hanida-hafsya-tsabita-42b849380/">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:hanidahafsya@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/grace.jpeg" alt="Grace" />
+        <div class="team-info">
+          <div class="team-name">Grace Nathalie</div>
+          <div class="team-role">Python & ML Analyst</div>
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/grace-nathalie-3a4b2b210/">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:gracechristy96@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/ikhwan.jpeg" alt="Ikhwan" />
+        <div class="team-info">
+          <div class="team-name">Ikhwan Nursyabani</div>
+          <div class="team-role">Content & Community</div>
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/ikhwan-nur-sya-bani-666231343">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:nursyabaniikhwan@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/kiki.jpeg" alt="Kiki" />
+        <div class="team-info">
+          <div class="team-name">Rizki Ritama</div>
+          <div class="team-role">UI & Platform Dev</div>
+          <div class="team-btns">
+            <a class="team-btn" href="https://www.linkedin.com/in/rizki-ritama-43b7783a9">☍ LinkedIn</a>
+            <a class="team-btn" href="mailto:rizkiritama27@gmail.com">✉ Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="location"> -->
+    <!-- Our Location -->
+    <!-- <div class="section-title anim anim-6">
+      <h2>Our Location</h2>
+      <p>Kunjungi marketplace offline STATtion</p>
+    </div>
+
+    <div class="maps-wrap anim anim-6">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.6699275616384!2d112.79010817357141!3d-7.278346871523232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbfa2ec4fcbb%3A0x3404f45cc0d80e82!2sDepartemen%20Statistika%20Bisnis%20ITS%20Surabaya!5e0!3m2!1sid!2sid!4v1777338218830!5m2!1sid!2sid"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    </div>
+  </div> -->
+  <!-- ai chatbox-->
+<div id="aiChatbox" class="chatbox-sidebar">
+    <div class="chatbox-header">
+        <h5 class="m-0">STATtion ChatBox</h5>
+        <button onclick="toggleChat()" class="btn-close btn-close-white"></button>
+    </div>
+    
+    <div id="chatBody" class="chatbox-body">
+        <div class="msg ai-msg">Halo! Ada yang bisa saya bantu seputar Statistika hari ini?</div>
+    </div>
+
+    <div class="chatbox-footer">
+        <input type="text" id="userInput" class="form-control" placeholder="Ketik Teks Untuk AI...">
+        <button onclick="sendMessage()" class="send-btn">
+            <i class="bi bi-send-fill"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Footer -->
+        <footer>
+        <div class="footer-body">
+            <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-4">
+                <p class="footer-brand-title">STATtion's with<br>Integrated System</p>
+                <p class="footer-brand-sub">STATtion mendominasi</p>
+
+                <div class="d-flex gap-2 mt-4 mt-lg-5">
+                <!-- Discord -->
+                <a href="https://discord.gg/DRYXJXCwT" class="social-btn" title="Discord">
+                    <i class="bi bi-discord"></i>
+                </a>
+                <!-- WhatsApp -->
+                <a href="https://wa.me/628283854081496?text=Halo%20STATtion,%20saya%20mau%20tanya%20tentang%20kalkulator%20terbaru" class="social-btn" title="WhatsApp">
+                    <i class="bi bi-whatsapp"></i>
+                </a>
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/statt1on/" class="social-btn" title="Instagram">
+                    <i class="bi bi-instagram"></i>
+                </a>
+                <!-- TikTok -->
+                <!-- <a href="#" class="social-btn" title="TikTok">
+                    <i class="bi bi-tiktok"></i>
+                </a> -->
+                </div>
+            </div>
+
+            <!-- COL 2 : Quick Links -->
+            <div class="col-6 col-sm-3 col-lg-2 offset-lg-3">
+                <p class="footer-heading">Quick Links</p>
+                <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutpage.html">About</a></li>
+                <li><a href="category.html">Kategori</a></li>
+                <li><a href="javascript:void(0)" onclick="toggleChat()">Chatbox</a></li>
+                </ul>
+            </div>
+
+            <!-- COL 3 : Sponsors -->
+            <!-- <div class="col-6 col-sm-3 col-lg-3">
+                <p class="footer-heading">Sponsors</p>
+                <div class="d-flex flex-column gap-3">
+
+                </div>
+            </div> -->
+
+            <!-- COL 4 : Contact -->
+            <div class="col-12 col-sm-6 col-lg-3 ">
+                <p class="footer-heading">Contact</p>
+                <p class="contact-org">STATtion</p>
+                <a href="https://maps.app.goo.gl/GKJ3hAJn6wvNafHJA" class="contact-detail" target="_blank">
+                Business Statistics<br>
+                Departement<br>
+                3nd Floor<br>
+                Jl. Raya ITS, Sukolilo,<br>
+                Surabaya 60111
+                </a>
+            </div>
+
+            </div>
+        </div>
+
+        <!-- ---- BOTTOM BAR ---- -->
+        <div class="footer-bottom d-flex align-items-center justify-content-between">
+            <span class="footer-copy">©STATtion 2026</span>
+            <!-- <a href="#" class="btn-top" title="Kembali ke atas"
+            onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">
+            <i class="bi bi-chevron-up fw-bold"></i>
+            </a> -->
+        </div>
+
+        </footer>
+</body>
+
+</html>

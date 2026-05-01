@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STATtion Marketplace</title>
+    <style>
+
+        /* CSS Dasar & Palet Warna */
+        :root {
+            --biru-muda: #D1E9F6;
+            --biru-tua: #2C3E50;
+            --aksen-biru: #3498DB;
+            --putih: #FFFFFF;
+            --abu-terang: #F8F9FA;
+            --aksen-merah: #ff4d4d;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--putih);
+            color: var(--biru-tua);
+        }
+        
+        /* Grid Produk */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+         .product-card {
+            background-color: var(--abu-terang);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 150px;
+            background-color: #eee;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .price {
+            color: var(--aksen-biru);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .btn-detail {
+            background-color: var(--biru-tua);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .container {
+            padding: 40px 5%;
+        }
+
+        .product-image img {
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius:8px;
+            overflow:hidden;
+        }
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .floating-cart {
+            position: fixed;
+            bottom: 30px;
+            background-color: var(--biru-muda);
+            border: 2px solid var(--biru-tua);
+            padding: 15px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .cart-count {
+            background-color: var(--aksen-merah);
+            color: var(--putih);
+            border-radius: 50%;
+            padding: 2px 8px;
+            font-size: 14px;
+        }
+
+        .product-card {
+            position: relative;
+        }
+        .detail-mengambang {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: var(--biru-tua);
+            color: var(--putih);
+            width: 220px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 10;
+            font-size: 14px;
+            text-align: left;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        .detail-mengambang ul {
+            padding-left: 15px;
+            margin: 5px 0 0 0;
+        }
+        .product-card:hover .detail-mengambang {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section class="category-section">
+            <h2 class="category-title">Kategori 1: Alat Hitung & Kalkulator</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Kalkulator grafik.png"></div>
+                    <h3>Casio fx-CG50</h3>
+                    <span class="price">Rp 2.450.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Layar Resolusi Tinggi</li>
+                            <li>Fungsi Grafik 3D</li>
+                            <li>Cocok untuk statistik lanjutan</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Kalkulator scientific.png"></div>
+                    <h3>Casio fx-991EX</h3>
+                    <span class="price">Rp 450.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Mendukung perhitungan Kalkulus</li>
+                            <li>Fitur spreadsheet</li>
+                            <li>Tampilan menu berbasis icon</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Kalkulator mini.png"></div>
+                    <h3>Joyko Standar</h3>
+                    <span class="price">Rp 1.200.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Layar lebar 12 digit mudah dibaca</li>
+                            <li>Daya baterai & Tenaga surya</li>
+                            <li>Cocok untuk perhitungan aritmatika cepat</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/Kalkulator standar.png"></div>
+                    <h3>Joyko Scientific</h3>
+                    <span class="price">Rp 150.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Menampilkan layar dua baris </li>
+                            <li>Fitur 400+ fungsi aritmatika</li>
+                            <li>Pilihan ekonomis dan fungsional untuk pelajar</li>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+        </section>   
+
+        <section class="category-section">
+            <h2 class="category-title">Kategori 2: Lisensi Software </h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="images/spss.png" alt=""></div>
+                    <h3>SPSS v26</h3>
+                    <span class="price">Rp 850.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Analisis statistik komprehensif</li>
+                            <li>Mendukung ujihipotesis dan pemodelan</li>
+                            <li>Visualisasi grafik siap pakai untuk paper</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/vscode pro.png" alt=""></div>
+                    <h3>VScode Pro</h3>
+                    <span class="price">Rp 600.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Dukungan optimal untuk web development </li>
+                            <li>Dilengkapi ekstensi premium bawaan</li>
+                            <li>Fitur auto complete cerdas</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/minitab 19.png" alt=""></div>
+                    <h3>Minitab 21</h3>
+                    <span class="price">Rp 750.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Perangkat analisis dasar hingga tingkat lanjut </li>
+                            <li>Tampilan visualisasi user-friendly</li>
+                            <li>Fitur assistant interaktif</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/excel premium.png" alt=""></div>
+                    <h3>Excel Premium</h3>
+                    <span class="price">Rp 200.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Data analysis tool untuk statistik instan</li>
+                            <li>Mendukung pengolahan Big Data</li>
+                            <li>Visualisasi dashboard interaktif dan dinamis</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <h2 class="category-title">Kategori 3: Buku Penunjang</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="images/bukutabel.png"></div>
+                    <h3>Buku Tabel Lengkap</h3>
+                    <span class="price">Rp 45.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Format tabel rapi dan mudah dibaca</li>
+                            <li>Praktis, tanpa perlu menghitung manual</li>
+                            <li>Ukuran ringkas, mudah dibawa kemana-mana</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/pengantar stat.png"></div>
+                    <h3>Pengantar Statistika</h3>
+                    <span class="price">Rp 120.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Membahas tuntas konsep probabilitas</li>
+                            <li>Dilengkapi ratusan soal aplikatif</li>
+                            <li>Direkomendasikan sebagai pondasi awal ilmu statistika</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/risop.png"></div>
+                    <h3>Riset Operasi</h3>
+                    <span class="price">Rp 75.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Panduan lengkap pemecahan masalah dan pengambilan keputusan</li>
+                            <li>Memberikan contoh langsung bidang industri</li>
+                            <li>Penjelasan alur logika runtut</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/makroekonomi.png"></div>
+                    <h3>Pengantar Ekonomi</h3>
+                    <span class="price">Rp 35.000</span>
+                    <button class="add-to-cart-btn" onclick="tambahKeKeranjang()">Tambah ke Keranjang</button>
+                    <div class="detail-mengambang">
+                        <p><strong>Spesifikasi Unggulan:</strong></p>
+                        <ul>
+                            <li>Relevan menganalisis fenomena bisnis</li>
+                            <li>Cocok sebagai fundamental makroekonomi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <div class="floating-cart">
+                🛒 Keranjang
+                <span id="jumlah-item" class="cart-count">0</span>
+            </div>
+            <script>
+                let jumlahDiKeranjang = 0;
+                function tambahKeKeranjang(){
+                    jumlahDiKeranjang++;
+                    document.getElementById("jumlah-item").innerText=jumlahDiKeranjang;
+                }
+            </script>
+    
+</body>
+</html>
