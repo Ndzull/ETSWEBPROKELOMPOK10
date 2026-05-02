@@ -13,6 +13,7 @@ Anggota Kelompok 10:<br>
 - Rizki Ritama (062)<br>
 <br>
 <i>Link PPT: https://www.canva.com/design/DAHGyIxrBCc/47lQRVXOQPs28gcml2KCbw/edit</i><br>
+<i>Link Figma: https://www.figma.com/design/K5BMspOghTU0vTk2NuPRke/ETSWEBPRO?node-id=0-1&p=f&t=pjjLl5pfE51GyHge-0</i><br>
 <i>Link OVERVIEW WEB: https://ndzull.github.io/ETSWEBPROKELOMPOK10/</i><br>
 <h2>APA ITU STATtion?</h2>
 STATtion adalah sebuah aplikasi berbasis web yang dirancang untuk memberikan fasilitas informasi tentang kebutuhan mahasiswa statistika. Website ini menyediakan berbagai informasi apa saja yang dibutuhkan oleh mahasiswa Statistika, seperti buku apa yang diperlukan untuk mata kuliah tertentu, apa saja alat-alat atau software yang digunakan dan lainnya. Dengan adanya STATtion, diharapkan mahasiswa dapat dengan mudah mengakses informasi yang mereka butuhkan untuk menunjang pembelajaran mereka di bidang statistika.<br>
@@ -21,23 +22,18 @@ STATtion adalah sebuah aplikasi berbasis web yang dirancang untuk memberikan fas
 <img src="assets/flowchart.png" alt="Flowchart">
 
 <h2>JOBDESK CHECKLIST</h2>
-Loginpage: kiki (aman)<br>
+Loginpage: kiki 076 (aman)<br>
 Homepage<br>
-- header: ijul (aman)<br>
-- section 1 ikhwan (aman)<br>
-- section 2 ikhwan (aman)<br>
-- section 3 ijul (aman)<br>
-- section 4 ijul (aman)<br>
-- footer: ikhwan (aman)<br>
-Aboutpage : Hani (aman)<br>
-Kategoripage : grace (aman)<br>
-Chatbox section : ijul (aman)<br>
-Yang nyatuin: ijul (aman)<br>
-
-<h2>Yang perlu dibenahin buat finishing:</h2>
-- masih ada beberapa section yang responsifnya berantakan (section 1 homepage)
-- beresin navbar di page kategori (anomali jir)
-- nyari cara push full github tanpa bagian api key (chatbox) ke hide
+- header: ijul 046 (aman)<br>
+- section 1 ikhwan 048 (aman)<br>
+- section 2 ikhwan 048 (aman)<br>
+- section 3 ijul 046 (aman)<br>
+- section 4 ijul 046 (aman)<br>
+- footer: ikhwan 048 (aman)<br>
+Aboutpage : Hani 056 (aman)<br>
+Kategoripage : grace 060 (aman)<br>
+Chatbox section : ijul 046 (aman)<br>
+Yang nyatuin: ijul 046 (aman)<br>
 
 <h2>Path file</h2>
 <code>
